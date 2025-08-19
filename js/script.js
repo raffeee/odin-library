@@ -17,3 +17,8 @@ function Book(title, author, pagecount, read) {
 function addBookToLibrary(title, author, pagecount, read) {
     myLibrary.push(new Book(title, author, pagecount, read))
 }
+
+function removeBookFromLibrary(id) {
+    // add guard clause for if book is not found?
+    myLibrary.pop(myLibrary.find((book) => book.id == id))
+}
